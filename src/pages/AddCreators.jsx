@@ -1,6 +1,6 @@
-
 import { useState } from 'react';
 import { supabase } from '../client';
+import '../EditCreator.css'; // Reuse the same CSS file
 
 function AddCreator() {
   const [name, setName] = useState('');
@@ -19,11 +19,50 @@ function AddCreator() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="NAME" required />
-      <input type="text" value={url} onChange={e => setUrl(e.target.value)} placeholder="URL" required />
-      <textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Description" />
-      <button type="submit">Add Creator</button>
+    <form className="edit-creator-form" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="form-control"
+          placeholder="Enter the creator's name"
+          required
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="url">Website URL:</label>
+        <input
+          type="text"
+          id="url"
+          name="url"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+          className="form-control"
+          placeholder="Enter the creator's website URL"
+          required
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="form-control"
+          placeholder="Enter a brief description"
+        />
+      </div>
+
+      <div className="button-group">
+        <button type="submit" className="btn-primary">Add Creator</button>
+      </div>
     </form>
   );
 }
