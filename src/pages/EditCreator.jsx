@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
-import '../EditCreator.css';  
+import '../css/EditCreator.css';  
 
 function EditCreator() {
   const { id } = useParams();

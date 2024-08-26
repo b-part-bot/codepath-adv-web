@@ -1,14 +1,14 @@
-import {useState, useEffect} from 'react';
-import {supabase} from '../client';
+import { useState, useEffect } from 'react';
+import { supabase } from '../client';
 import CreatorCard from '../components/CreatorCard';
+import '../css/ShowCreators.css';
 
 function ShowCreators() {
-
   const [creators, setCreators] = useState([]);
 
   useEffect(() => {
     async function fetchCreators() {
-      const {data, error} = await supabase
+      const { data, error } = await supabase
         .from('creators')
         .select('*');
 
@@ -17,18 +17,18 @@ function ShowCreators() {
       } else {
         setCreators(data);
       }
-
     }
 
     fetchCreators();
-
-  },[]);
+  }, []);
 
   return (
-    <div>
-      {creators.map(creator =>
-        <CreatorCard key={creator.id} creator={creator} />
-        )}
+    <div className="show-creators-page">
+      <div className="creators-grid">
+        {creators.map(creator => (
+          <CreatorCard key={creator.id} creator={creator} />
+        ))}
+      </div>
     </div>
   );
 }

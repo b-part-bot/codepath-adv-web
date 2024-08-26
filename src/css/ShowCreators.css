@@ -1,0 +1,67 @@
+.show-creators-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+  }
+  
+  .creators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .creator-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .creator-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .creator-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .creator-card .creator-details {
+    padding: 20px;
+  }
+  
+  .creator-card .creator-name {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .creator-card .creator-description {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .creator-card .creator-url {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .creator-card .creator-url:hover {
+    background-color: #0056b3;
+  }
+  

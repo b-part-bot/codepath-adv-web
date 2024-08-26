@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { supabase } from '../client';
-import '../EditCreator.css'; // Reuse the same CSS file
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import '../css/EditCreator.css'; // Reuse the same CSS file
 
 function AddCreator() {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [description, setDescription] = useState('');
+  const navigate = useNavigate(); // Initialize the navigate hook
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -15,6 +17,7 @@ function AddCreator() {
       console.error('Creator could not be added', error);
     } else {
       console.log('Creator was successfully added', data);
+      navigate('/'); // Redirect to the "View Creators" page after success
     }
   }
 

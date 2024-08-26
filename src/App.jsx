@@ -5,7 +5,7 @@ import EditCreator from './pages/EditCreator';
 import ShowCreators from './pages/ShowCreators';
 import ViewCreator from './pages/ViewCreator';
 
-import './App.css';
+import '../src/css/App.css';
 
 const Header = () => (
   <header className="header">
