@@ -1,69 +1,62 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header styles */
-  .header {
-    background-color: #282c34;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .title {
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-  }
-  
-  .nav-list {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .nav-item {
-    margin: 0 15px;
-  }
-  
-  .nav-link {
-    color: #61dafb;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main content styles */
-  .main-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  /* Footer styles */
-  .footer {
-    background-color: #282c34;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-  }
-  
+/* Card container styling */
+.creator-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced out */
+  height: 400px; /* Set a fixed height for the card */
+  /* Adjust height according to your design */
+}
+
+/* Spacer to control button position */
+.spacer {
+  flex-grow: 1; /* Fills available space */
+  /* Add specific margin-top value to adjust button position */
+  margin-top: 20%; /* Adjust this value to position buttons around 3/4ths of the card */
+}
+
+/* Common button styles */
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Specific button styles */
+.btn-details {
+  background-color: #007bff; /* Blue */
+}
+
+.btn-details:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.btn-edit {
+  background-color: #28a745; /* Green */
+}
+
+.btn-edit:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.btn-visit {
+  background-color: #17a2b8; /* Teal */
+}
+
+.btn-visit:hover {
+  background-color: #138496; /* Darker teal */
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}

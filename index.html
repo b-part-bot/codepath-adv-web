@@ -2,13 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webapp
-    </title>
+    <meta name="description" content="A modern web application built with React and Vite." />
+    
+    <!-- Preload the favicon for faster load -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+
+    <title>WebApp</title>
+    
+    <!-- Add additional OpenGraph meta tags for SEO and Social Sharing -->
+    <meta property="og:title" content="WebApp" />
+    <meta property="og:description" content="A modern web app using React and Vite." />
   </head>
+  
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    
+    <main role="main">
+      <div id="root"></div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2024 WebApp</p>
+    </footer>
+
+    <!-- Defer the script loading for better performance -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
