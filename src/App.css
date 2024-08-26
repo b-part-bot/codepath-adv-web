@@ -1,0 +1,96 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #282c34;
+  padding: 20px 0;
+  color: white;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.creator-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creator-card h3 {
+  margin: 0;
+}
+
+.creator-card p {
+  color: #666;
+}
+
+.creator-card-actions {
+  margin-top: 15px;
+}
+
+.creator-card-actions a {
+  text-decoration: none;
+  color: #61dafb;
+  margin-right: 15px;
+}
+
+.creator-card-actions a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
